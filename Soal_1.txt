@@ -1,0 +1,47 @@
+Soal 1 
+Kasus:
+Seorang petani ingin system AI yang bisa membantu menentukan jenis hama tanaman berdasarkan gejala seperti:
+> Daun menguning
+> Terdapat bercak hitam
+> Daun berlubang
+> Tanaman layu
+
+1.	 Sistem pakar berbasis aturan logika
+Aturan:
+•	Jika daun menguning dan tanaman layu, maka hamanya adalah ular tanah.
+•	Jika daun berlubang dan ada bercak hitam, maka hamanya adalah kumbang daun.
+•	Jika daun berlubang saja, maka hamanya adalah belalang.
+•	Jika hanya bercak hitam tanpa lubang, maka hamanya adalah jamur daun.
+2.	Logika Proposional 
+Misalnya:
+•	Dm = Daun menguninng
+•	Bh = Bercak hitam
+•	Db = Daun berlubang
+•	Tl = Tanaman layu
+Maka Aturannya:
+•	(Dm ∧ Tl) → hama: ulat tanah
+•	(Db ∧ Bh) → hama: kumbang daun
+•	(Db ∧ ¬Bh) → hama: belalang
+•	(Bh ∧ ¬ Db) → hama: kumbang daun
+
+3.	Pseudocode
+IF daun menguning AND tanaman layu THEN
+    hama = "Ulat tanah"
+ELSE IF daun berlubang AND bercak hitam THEN
+    hama = "Kumbang daun"
+ELSE IF daun berlubang THEN
+    hama = "Belalang"
+ELSE IF bercak hitam THEN
+    hama = "Jamur daun"
+ELSE
+    hama = "Tidak diketahui"
+
+4.	Alur Inferensi dari Input Output
+Alur Inferensinya:
+	Input
+Petani memasukkan data gejala tanaman, apakah daun menguning, terdapat bercak hitam, daun berlubang atau tanaman layu. 
+	Proses
+o	Sistem mengecek apakah kombinasi gejala memenuhi salah satu aturan logika yang ada. 
+o	Sistem menggunakan inferensi berbasis aturan IF-THEN untuk menentukan hama.
+	Output
+Sistem memberikan jenis hama yang paling sesuai berdasarkan gejala yang dideteksi.
